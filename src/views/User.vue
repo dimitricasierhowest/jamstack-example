@@ -5,6 +5,7 @@
         <div>
           <h1>{{ user.name.title}} {{ user.name.first}} {{ user.name.last}}</h1>
           <img :src="user.picture.large" />
+          <div><a :href="'mailto:' + user.email">{{ user.email }}</a> </div>
         </div>
         <button @click="fetchUser">next!</button>
       </article>
