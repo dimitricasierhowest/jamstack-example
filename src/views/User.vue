@@ -5,7 +5,7 @@
         <div>
           <h1>{{ user.name.title}} {{ user.name.first}} {{ user.name.last}}</h1>
           <img :src="user.picture.large" />
-          <div><a :href="'mailto:' + user.email">{{ user.email }}</a> </div>
+          <a :href="'mailto:' + user.email">{{ user.email }}</a>
         </div>
         <button @click="fetchUser">next!</button>
       </article>
@@ -41,3 +41,10 @@ export default {
   }
 };
 </script>
+<style scoped>
+.user a {
+  color: gold;
+  margin-bottom: 15px;
+  display: block;
+}
+</style>
